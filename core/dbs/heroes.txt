@@ -1,0 +1,236 @@
+{
+    "KNIGHTS": [
+        {
+            "ID" : "0",
+            "TYPE" : "blue_knight",
+            "HERO" : "Tantine",
+            "STATS": [
+                {
+                    "HP" : [{"min":"70","max":"100"}],
+                    "ST" : [{"min":"70","max":"80"}],
+                    "DF" : [{"min":"45","max":"55"}],
+                    "SP" : [{"min":"40","max":"50"}],
+                    "LK" : [{"min":"10","max":"30"}]
+                }
+                    ],
+            "SKILLS" : [
+                {
+                    "skill":"Magic Shield",
+                    "desc":"100",
+                    "prob":"20%"
+                },
+                {
+                    "skill":"Rapid Strike",
+                    "desc":"100",
+                    "prob":"10%"
+                }
+            ],
+            "DESC" : "Tantine is a brave warrior",
+            "TALK" : [
+                {
+                    "happy" : [
+                        {
+                            "text" : "Winning"
+                        }
+                    ],
+                    "sad" : [
+                        {
+                            "text" : "Winning"
+                        }
+                    ],
+                    "bored" : [
+                        {
+                            "text" : "Soo ... what's up?"
+                        }
+                    ]
+                }
+            ],
+            "STATUS" : [
+                {
+                    "standing" : "icons/blue-knight-left.png",
+                    "walk_rt" : "icons/blue-knight-right.png",
+                    "walk_lf" : "icons/blue-knight-left.png",
+                    "walk_up" : "icons/blue-knight-back.png",
+                    "attacking" : "",
+                    "celebrating" : "",
+                    "bored" : "", 
+                    "dead" : ""            
+                }
+            ]
+        },
+        {
+            "ID" : "1",
+            "TYPE" : "red_knight",
+            "HERO" : "Axealot",
+            "STATS": [
+                {
+                    "HP" : [{"min":"70","max":"100"}],
+                    "ST" : [{"min":"70","max":"100"}],
+                    "DF" : [{"min":"70","max":"100"}],
+                    "SP" : [{"min":"70","max":"100"}],
+                    "LK" : [{"min":"70","max":"100"}]
+                }
+                    ],
+            "SKILLS" : [
+                {
+                    "skill":"Magic Shield",
+                    "desc":"100",
+                    "prob":"20%"
+                },
+                {
+                    "skill":"Rapid Strike",
+                    "desc":"100",
+                    "prob":"10%"
+                }
+            ],
+            "DESC" : "Tantine is a brave warrior",
+            "TALK" : [
+                {
+                    "happy" : [
+                        {
+                            "text" : "Winning"
+                        }
+                    ],
+                    "sad" : [
+                        {
+                            "text" : "Winning"
+                        }
+                    ],
+                    "bored" : [
+                        {
+                            "text" : "Soo ... what's up?"
+                        }
+                    ]
+                }
+            ],
+            "STATUS" : [
+                {
+                    "standing" : "icons/blue-knight-left.png",
+                    "walk_rt" : "icons/blue-knight-right.png",
+                    "walk_lf" : "icons/blue-knight-left.png",
+                    "walk_up" : "icons/blue-knight-back.png",
+                    "attacking" : "",
+                    "celebrating" : "",
+                    "bored" : "", 
+                    "dead" : ""            
+                }
+            ]
+        },
+        {
+            "ID" : "2",
+            "TYPE" : "green_knight",
+            "HERO" : "Werlin",
+            "STATS": [
+                {
+                    "HP" : [{"min":"70","max":"100"}],
+                    "ST" : [{"min":"70","max":"100"}],
+                    "DF" : [{"min":"70","max":"100"}],
+                    "SP" : [{"min":"70","max":"100"}],
+                    "LK" : [{"min":"70","max":"100"}]
+                }
+                    ],
+            "SKILLS" : [
+                {
+                    "skill":"Magic Shield",
+                    "desc":"100",
+                    "prob":"20%"
+                },
+                {
+                    "skill":"Rapid Strike",
+                    "desc":"100",
+                    "prob":"10%"
+                }
+            ],
+            "DESC" : "Tantine is a brave warrior",
+            "TALK" : [
+                {
+                    "happy" : [
+                        {
+                            "text" : "Winning"
+                        }
+                    ],
+                    "sad" : [
+                        {
+                            "text" : "Winning"
+                        }
+                    ],
+                    "bored" : [
+                        {
+                            "text" : "Soo ... what's up?"
+                        }
+                    ]
+                }
+            ],
+            "STATUS" : [
+                {
+                    "standing" : "icons/blue-knight-left.png",
+                    "walk_rt" : "icons/blue-knight-right.png",
+                    "walk_lf" : "icons/blue-knight-left.png",
+                    "walk_up" : "icons/blue-knight-back.png",
+                    "attacking" : "",
+                    "celebrating" : "",
+                    "bored" : "", 
+                    "dead" : ""            
+                }
+            ]
+        },
+        {
+            "ID" : "3",
+            "TYPE" : "yellow_knight",
+            "HERO" : "Blegolas",
+            "STATS": [
+                {
+                    "HP" : [{"min":"70","max":"100"}],
+                    "ST" : [{"min":"70","max":"100"}],
+                    "DF" : [{"min":"70","max":"100"}],
+                    "SP" : [{"min":"70","max":"100"}],
+                    "LK" : [{"min":"70","max":"100"}]
+                }
+                    ],
+            "SKILLS" : [
+                {
+                    "skill":"Magic Shield",
+                    "desc":"100",
+                    "prob":"20%"
+                },
+                {
+                    "skill":"Rapid Strike",
+                    "desc":"100",
+                    "prob":"10%"
+                }
+            ],
+            "DESC" : "Tantine is a brave warrior",
+            "TALK" : [
+                {
+                    "happy" : [
+                        {
+                            "text" : "Winning"
+                        }
+                    ],
+                    "sad" : [
+                        {
+                            "text" : "Winning"
+                        }
+                    ],
+                    "bored" : [
+                        {
+                            "text" : "Soo ... what's up?"
+                        }
+                    ]
+                }
+            ],
+            "STATUS" : [
+                {
+                    "standing" : "icons/blue-knight-left.png",
+                    "walk_rt" : "icons/blue-knight-right.png",
+                    "walk_lf" : "icons/blue-knight-left.png",
+                    "walk_up" : "icons/blue-knight-back.png",
+                    "attacking" : "",
+                    "celebrating" : "",
+                    "bored" : "", 
+                    "dead" : ""            
+                }
+            ]
+        }
+    ]
+}
