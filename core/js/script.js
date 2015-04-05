@@ -2731,6 +2731,7 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
                 console.log('The knight won!');
             } else {
                 console.log('The monster won!');
+                knight.classList.add('dead');
             }
             //console.log(k_vs_m['winner']);
             //console.log(k_vs_m[k_vs_m['winner']]);
@@ -2744,6 +2745,7 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
                 console.log('The knight won!');
             } else {
                 console.log('The monster won!');
+                knight.classList.add('dead');
             }
 
         } else {
@@ -2875,7 +2877,6 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
             .fail(function () {
                 alert("Captain, it appears that we cannot find any of our heroes!")
             });
-
 
             // Find out what monsters live in the level JSON file
             $.getJSON(level, function (result) {
