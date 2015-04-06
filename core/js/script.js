@@ -2322,7 +2322,7 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
     // Load environment
 
     var play_level = "dbs/level1.txt";
-    var kni_character = 'yellow';
+    var kni_character = 'blue';
 
     // Start the business:
 
@@ -2612,6 +2612,7 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
 
         //A function for the combat scenario
         //checkPlayers();
+        startCombat(kni_character, 'ghost');
     }
 
 
@@ -2704,19 +2705,59 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
         //check environment
     }
 
+
     // Combat scenarios:
-
-
 
     function startCombat(player1, player2) {
 
+        var debug = true;
+        function customDebug(message) {
+            if (debug) console.log(message);
+        }
+
+        var probability = function (n) {
+            n = n / 100;
+            return !!n && Math.random() <= n;
+        };
+
+        var luck = function (value, result) {
+            if (probability(value)) {
+                customDebug('Missed!');
+                return 0;
+            } else {
+                return result;
+            }
+        };
+
+        function attack(value, result) {
+            if (probability(value)) {
+                customDebug('Double attack!');
+                return result * 2;
+            } else {
+                return result;
+            }
+        };
+
+        function defense(value, result) {
+            if (probability(value)) {
+                customDebug('Double defence!');
+                return result * 2;
+            } else {
+                return result;
+            }
+        };
+
+        var hasLife = function (value) {
+            return (value >= 0 ? true : false);
+        }
+
         // Get info about "player 1"
         //      HP    ST    DF    SP    LK
-        xpl = ['50', '60', '43', '80', '18'];
+        xpl = ['1000', '40', '21', '50', '21']; var pl1_skill_atk = 20; var pl1_skill_def = 20;
 
         //      HP    ST    DF    SP    LK
         // Get info about "player 2"
-        xmn = ['90', '80', '43', '40', '19'];
+        xmn = ['1000', '38', '18', '71', '16']; var pl2_skill_atk = 20; var pl2_skill_def = 20;
 
         var pl1 = { hp: xpl[0], st: xpl[1], df: xpl[2], sp: xpl[3], lk: xpl[4] };
         var pl2 = { hp: xmn[0], st: xmn[1], df: xmn[2], sp: xmn[3], lk: xmn[4] };
@@ -2729,6 +2770,7 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
 
             if (k_vs_m['winner'] == 'p1') {
                 console.log('The knight won!');
+                //alert('Knight won');
             } else {
                 console.log('The monster won!');
                 knight.classList.add('dead');
@@ -2736,19 +2778,22 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
             //console.log(k_vs_m['winner']);
             //console.log(k_vs_m[k_vs_m['winner']]);
 
-        } else if (pl1.sp < pl2.sp) {
+        }
+        else if (pl1.sp < pl2.sp) {
             console.log('The monster challenges the knight to a battle!');
 
             var m_vs_k = battle(pl1, pl2);
 
             if (m_vs_k['winner'] == 'p1') {
                 console.log('The knight won!');
+                //alert('Knight won');
             } else {
                 console.log('The monster won!');
                 knight.classList.add('dead');
             }
 
-        } else {
+        }
+        else {
             if (pl1.lk > pl2.lk) {
                 console.log('The knight is luckyer this time');
 
@@ -2761,54 +2806,74 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
 
         function battle(player1, player2) {
 
-            var debug = false;
-
             var result = [];
 
             var i = 1;
 
-            while (true) {
+            var kungfu = true;
 
-                if (debug) console.log('round ' + i + ' fight!');
-                if (debug) console.log('PL1: ' + player1.hp + ' | PL2: ' + player2.hp);
+            while (kungfu) {
 
-                if (player1.hp >= 1) {
+                customDebug('ROUND ' + i + ' FIGHT!');
+                customDebug('PL1: ' + player1.hp + ' | PL2: ' + player2.hp);
 
-                    player2.hp = player2.hp - Math.max(0, (player1.st - player2.df));
-                    if (debug) console.log('PL1 loveste cu ' + player1.st + ' dar PL2 se apara cu ' + player2.df + ' si ramane cu ' + player2.hp);
+                if (hasLife(player1.hp)) {
+                    customDebug("________________ Player one's turn ___________________");
+                    var p1_attack = attack(pl1_skill_atk, luck(player2.lk, player1.st));
+                    var p2_defense = defense(pl2_skill_def, player2.df);
+
+                    player2.hp = player2.hp - Math.max(0, (p1_attack - p2_defense));
+                    customDebug('PL2 hits with ' + p1_attack + ' strength. PL1 defends himself with ' + p2_defense + ' defence and is left with ' + player2.hp + ' health.');
                 }
 
-                if (player2.hp >= 1) {
-                    player1.hp = player1.hp - Math.max(0, (player2.st - player1.df));
-                    if (debug) console.log('PL2 loveste cu ' + player2.st + ' dar PL1 se apara cu ' + player1.df + ' si ramane cu ' + player1.hp);
+                if (hasLife(player2.hp)) {
+                    customDebug("________________ Player two's turn ___________________");
+                    var p2_attack = attack(pl2_skill_atk, luck(player1.lk, player2.st));
+                    var p1_defense = defense(pl1_skill_def, player1.df);
+
+                    player1.hp = player1.hp - Math.max(0, (p2_attack - p1_defense));
+                    customDebug('PL2 hits with ' + p2_attack + ' strength. PL1 defends himself with ' + p1_defense + ' defence and is left with ' + player1.hp + ' health.');
                 }
 
-                if (player1.hp <= 0) {
-                    if (debug) console.log('PL1 no more power');
+                if (!hasLife(player1.hp)) {
+                    customDebug('PL1 no more power');
                     result['winner'] = 'p2';
-                    break
-                } else if (player2.hp <= 0) {
-                    if (debug) console.log('PL2 no more power');
+                    kungfu = false;
+                } else if (!hasLife(player2.hp)) {
+                    customDebug('PL2 no more power');
                     result['winner'] = 'p1';
-                    break
+                    kungfu = false;
                 }
 
-                if (debug) console.log('rezultat: ' + player1.hp + " vs. " + player2.hp);
-                if (debug) console.log('_______________________________________________')
+                customDebug('RESULT: ' + player1.hp + " vs. " + player2.hp);
+                customDebug('******************************************************');
+                customDebug('******************************************************');
+
+                if (i == 20) {
+                    if (player1.hp > player2.hp) {
+                        result['winner'] = 'p1';
+                    } else if (player1.hp < player2.hp) {
+                        result['winner'] = 'p2';
+                    } else {
+                        result['winner'] = 'none';
+                        customDebug("I DON'T BELIEVE IT... IT'S A DRAW!");
+                    }
+                    customDebug('THAT WAS THE FINAL ROUND!');
+                    kungfu = false;
+                }
+
                 i++;
             }
 
             result['p1'] = player1;
             result['p2'] = player2;
 
-            if (debug) console.log('result: ', result);
+            customDebug('(Array) - FIGHT RESULT: ', result);
 
             return result;
         };
 
     }
-    startCombat(kni_character, 'ghost');
-
 
 
     var knightStats = []    // for temporary storage - Knights Stats;

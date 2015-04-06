@@ -64,10 +64,15 @@
                 { "id" : "24","position" : [{"X" : "500","Y" : "700"}],"type" : "forrest" }
             ],
             "monsters" : [
-                { "id" : "0","position" : [{"X" : "0","Y" : "300"}],"type" : "ghost","stats": [{"HP" : [{"min":"70","max":"100"}],"ST" : [{"min":"70","max":"80"}],"DF" : [{"min":"45","max":"55"}],"SP" : [{"min":"40","max":"50"}],"LK" : [{"min":"10","max":"20"}]}], "skills" : [{"skill":"Magic Shield","desc":"100","prob":"20%"}]}               
+                { "id" : "0","position" : [{"X" : "0","Y" : "300"}],"type" : "ghost","stats": [{"HP" : [{"min":"70","max":"100"}],"ST" : [{"min":"70","max":"80"}],"DF" : [{"min":"45","max":"55"}],"SP" : [{"min":"40","max":"50"}],"LK" : [{"min":"10","max":"20"}]}], "skills" : [{"skill":"Magic Shield","desc":"100","prob":"20%"}]},               
+                { "id" : "1","position" : [{"X" : "600","Y" : "200"}],"type" : "ghost","stats": [{"HP" : [{"min":"70","max":"100"}],"ST" : [{"min":"70","max":"80"}],"DF" : [{"min":"45","max":"55"}],"SP" : [{"min":"40","max":"50"}],"LK" : [{"min":"10","max":"20"}]}], "skills" : [{"skill":"Magic Shield","desc":"100","prob":"20%"}]},               
+                { "id" : "2","position" : [{"X" : "700","Y" : "500"}],"type" : "ghost","stats": [{"HP" : [{"min":"70","max":"100"}],"ST" : [{"min":"70","max":"80"}],"DF" : [{"min":"45","max":"55"}],"SP" : [{"min":"40","max":"50"}],"LK" : [{"min":"10","max":"20"}]}], "skills" : [{"skill":"Magic Shield","desc":"100","prob":"20%"}]}               
+
             ],
             "items" : [
-                {"id" : "1","position" : [{"X" : "100","Y" : "300"}],"type" : "health","plus" : "22"}
+                {"id" : "1","position" : [{"X" : "100","Y" : "300"}],"type" : "health","plus" : "22"},
+                {"id" : "2","position" : [{"X" : "200","Y" : "500"}],"type" : "health","plus" : "22"},
+                {"id" : "3","position" : [{"X" : "700","Y" : "400"}],"type" : "health","plus" : "22"}
             ]
         }
     ]
