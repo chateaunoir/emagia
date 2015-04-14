@@ -6,23 +6,27 @@
             "HERO" : "Tantine",
             "STATS": [
                 {
-                    "HP" : [{"min":"70","max":"100"}],
-                    "ST" : [{"min":"70","max":"80"}],
-                    "DF" : [{"min":"45","max":"55"}],
-                    "SP" : [{"min":"40","max":"50"}],
-                    "LK" : [{"min":"10","max":"30"}]
+                    "HP" : "100",
+                    "ST" : "76",
+                    "DF" : "53",
+                    "SP" : "56",
+                    "LK" : "16"
                 }
                     ],
             "SKILLS" : [
                 {
-                    "skill":"Magic Shield",
-                    "desc":"100",
-                    "prob":"20%"
+                    "skill" : "Magic Shield",
+                    "id" : "0",
+                    "desc" : "This is the damn description for the magic shield",
+                    "prob" : "10",
+                    "status" : "0"
                 },
                 {
-                    "skill":"Rapid Strike",
-                    "desc":"100",
-                    "prob":"10%"
+                    "skill" : "Rapid Strike",
+                    "id" : "1",
+                    "desc" : "This is the damn description for the rapid strike",
+                    "prob" : "10",
+                    "status" : "0"
                 }
             ],
             "DESC" : "Tantine is a brave warrior",
@@ -45,18 +49,7 @@
                     ]
                 }
             ],
-            "STATUS" : [
-                {
-                    "standing" : "icons/blue-knight-left.png",
-                    "walk_rt" : "icons/blue-knight-right.png",
-                    "walk_lf" : "icons/blue-knight-left.png",
-                    "walk_up" : "icons/blue-knight-back.png",
-                    "attacking" : "",
-                    "celebrating" : "",
-                    "bored" : "", 
-                    "dead" : ""            
-                }
-            ]
+            "PIC" : "css/icons/blue-knight-left.png"
         },
         {
             "ID" : "1",
@@ -64,26 +57,30 @@
             "HERO" : "Axealot",
             "STATS": [
                 {
-                    "HP" : [{"min":"70","max":"100"}],
-                    "ST" : [{"min":"70","max":"100"}],
-                    "DF" : [{"min":"70","max":"100"}],
-                    "SP" : [{"min":"70","max":"100"}],
-                    "LK" : [{"min":"70","max":"100"}]
+                    "HP" : "100",
+                    "ST" : "40",
+                    "DF" : "41",
+                    "SP" : "42",
+                    "LK" : "15"
                 }
                     ],
             "SKILLS" : [
                 {
-                    "skill":"Magic Shield",
-                    "desc":"100",
-                    "prob":"20%"
+                    "skill" : "Dragon skin",
+                    "id" : "0",
+                    "desc" : "This is the damn description for the Dragon skin",
+                    "prob" : "10",
+                    "status" : "0"
                 },
                 {
-                    "skill":"Rapid Strike",
-                    "desc":"100",
-                    "prob":"10%"
+                    "skill" : "Power hammer",
+                    "id" : "1",
+                    "desc" : "This is the damn description for the power hammer",
+                    "prob" : "10",
+                    "status" : "0"
                 }
             ],
-            "DESC" : "Tantine is a brave warrior",
+            "DESC" : "Axealot is a brave warrior",
             "TALK" : [
                 {
                     "happy" : [
@@ -103,18 +100,7 @@
                     ]
                 }
             ],
-            "STATUS" : [
-                {
-                    "standing" : "icons/blue-knight-left.png",
-                    "walk_rt" : "icons/blue-knight-right.png",
-                    "walk_lf" : "icons/blue-knight-left.png",
-                    "walk_up" : "icons/blue-knight-back.png",
-                    "attacking" : "",
-                    "celebrating" : "",
-                    "bored" : "", 
-                    "dead" : ""            
-                }
-            ]
+            "PIC" : "css/icons/red-knight-left.png"
         },
         {
             "ID" : "2",
@@ -122,26 +108,30 @@
             "HERO" : "Werlin",
             "STATS": [
                 {
-                    "HP" : [{"min":"70","max":"100"}],
-                    "ST" : [{"min":"70","max":"100"}],
-                    "DF" : [{"min":"70","max":"100"}],
-                    "SP" : [{"min":"70","max":"100"}],
-                    "LK" : [{"min":"70","max":"100"}]
+                    "HP" : "100",
+                    "ST" : "41",
+                    "DF" : "72",
+                    "SP" : "68",
+                    "LK" : "22"
                 }
                     ],
             "SKILLS" : [
                 {
-                    "skill":"Magic Shield",
-                    "desc":"100",
-                    "prob":"20%"
+                    "skill" : "Force field",
+                    "id" : "0",
+                    "desc" : "This is the damn description for the magic shield",
+                    "prob" : "10",
+                    "status" : "0"
                 },
                 {
-                    "skill":"Rapid Strike",
-                    "desc":"100",
-                    "prob":"10%"
+                    "skill" : "Sabre's claw",
+                    "id" : "1",
+                    "desc" : "This is the damn description for the rapid strike",
+                    "prob" : "10",
+                    "status" : "0"
                 }
             ],
-            "DESC" : "Tantine is a brave warrior",
+            "DESC" : "Werlin is a brave warrior",
             "TALK" : [
                 {
                     "happy" : [
@@ -161,18 +151,7 @@
                     ]
                 }
             ],
-            "STATUS" : [
-                {
-                    "standing" : "icons/blue-knight-left.png",
-                    "walk_rt" : "icons/blue-knight-right.png",
-                    "walk_lf" : "icons/blue-knight-left.png",
-                    "walk_up" : "icons/blue-knight-back.png",
-                    "attacking" : "",
-                    "celebrating" : "",
-                    "bored" : "", 
-                    "dead" : ""            
-                }
-            ]
+            "PIC" : "css/icons/green-knight-left.png"
         },
         {
             "ID" : "3",
@@ -180,26 +159,30 @@
             "HERO" : "Blegolas",
             "STATS": [
                 {
-                    "HP" : [{"min":"70","max":"100"}],
-                    "ST" : [{"min":"70","max":"100"}],
-                    "DF" : [{"min":"70","max":"100"}],
-                    "SP" : [{"min":"70","max":"100"}],
-                    "LK" : [{"min":"70","max":"100"}]
+                    "HP" : "100",
+                    "ST" : "66",
+                    "DF" : "40",
+                    "SP" : "80",
+                    "LK" : "30"
                 }
                     ],
             "SKILLS" : [
                 {
-                    "skill":"Magic Shield",
-                    "desc":"100",
-                    "prob":"20%"
+                    "skill" : "Deflect",
+                    "id" : "0",
+                    "desc" : "This is the damn description for the magic shield",
+                    "prob" : "10",
+                    "status" : "0"
                 },
                 {
-                    "skill":"Rapid Strike",
-                    "desc":"100",
-                    "prob":"10%"
+                    "skill" : "Arrow",
+                    "id" : "1",
+                    "desc" : "This is the damn description for the rapid strike",
+                    "prob" : "10",
+                    "status" : "0"
                 }
             ],
-            "DESC" : "Tantine is a brave warrior",
+            "DESC" : "Blegolas is a weird warrior",
             "TALK" : [
                 {
                     "happy" : [
@@ -219,18 +202,7 @@
                     ]
                 }
             ],
-            "STATUS" : [
-                {
-                    "standing" : "icons/blue-knight-left.png",
-                    "walk_rt" : "icons/blue-knight-right.png",
-                    "walk_lf" : "icons/blue-knight-left.png",
-                    "walk_up" : "icons/blue-knight-back.png",
-                    "attacking" : "",
-                    "celebrating" : "",
-                    "bored" : "", 
-                    "dead" : ""            
-                }
-            ]
+            "PIC" : "css/icons/yellow-knight-left.png"
         }
     ]
 }

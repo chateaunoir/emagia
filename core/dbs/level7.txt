@@ -1,0 +1,36 @@
+{
+    "NAME" : "Level 7",
+    "SIZE" : [
+        {
+            "width" : "16",
+            "height": "10"
+        }
+    ],
+    "COMP" : [
+        {
+            "map" : [
+                {
+                    "background" : "css/backgrounds/grass.png",
+                    "ambiance" : "1"
+                }
+            ],
+            "start" : [
+                {
+                    "id": "1",
+                    "X" : "200",
+                    "Y" : "200"
+                }
+            ],
+            "finish" : [
+                {
+                    "id": "1",
+                    "X" : "800",
+                    "Y" : "500"
+                }
+            ],
+            "blocks" : [],
+            "monsters" : [],
+            "items" : []
+        }
+    ]
+}

@@ -117,14 +117,29 @@ html,body {
       display: inline-block;
       margin: 0 auto;
       position: relative;
+      width: 100%;
+      
+      img {
+          width: 100%;
+      }
 }
 
+.navbar {
+    .navbar-brand {
+        &h6,&.h6 {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
+        line-height: 20px;
+    }
+}
 // LANDING PAGE
 
 .wrapper {
     min-height: 100%;
     .page-content {
-        
         background: #1d2839; /* Old browsers */
         /* IE9 SVG, needs conditional override of 'filter' to 'none' */
         background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFkMjgzOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZTEzMWMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -135,12 +150,35 @@ html,body {
         background: -ms-linear-gradient(top, #1d2839 0%,#0e131c 100%); /* IE10+ */
         background: linear-gradient(to bottom, #1d2839 0%,#0e131c 100%); /* W3C */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d2839', endColorstr='#0e131c',GradientType=0 ); /* IE6-8 */
+
     }
+}
+
+.fix-middle {
+    position: absolute;
+    width:auto;
+    height:auto;
+    padding:10px;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    z-index:3;
 }
 
 
 
+
 // GAME PAGE
+
+.game-start {
+    
+    &.rolled-up {
+        
+    }
+}
 
 .game-wrapper {
     position: relative;
@@ -157,6 +195,7 @@ html,body {
     overflow: hidden;
     top: 0;
     bottom: 0;
+    z-index: 10;
     .user-dashboard {
         position: fixed;
         top: 50%;
@@ -170,12 +209,28 @@ html,body {
         height: auto;
         background-color: rgba(0,0,0, .8);
         padding: 0 15px;
-        z-index: 10;
-        
         -webkit-box-shadow: 0px -1px 5px 0px #000000;
         -moz-box-shadow: 0px -1px 5px 0px #000000;
         -o-box-shadow: 0px -1px 5px 0px #000000;
         box-shadow: 0px -1px 5px 0px #000000;
+    }
+    
+    #pause-menu, #game-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0, .9);
+        top: -110%;
+        -webkit-transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -ms-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+        &.active {
+            top: 0;
+        }
     }
 }
 
@@ -185,19 +240,18 @@ html,body {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #f1f1f1;
+    background-color: #444;
     background-repeat: repeat;
-    background-size: 200px;
-    background-image: url('backgrounds/grass.png');
+    background-size: 100px;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     -ms-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
-    -webkit-box-shadow: 0px 0px 20px 1px #000000;
-    -moz-box-shadow: 0px 0px 20px 1px #000000;
-    -o-box-shadow: 0px 0px 20px 1px #000000;
-    box-shadow: 0px 0px 20px 1px #000000;
+    -webkit-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.95), inset 0px 0px 60px 5px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.95), inset 0px 0px 60px 5px rgba(0,0,0,0.6);
+    -o-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.95), inset 0px 0px 60px 5px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.95), inset 0px 0px 60px 5px rgba(0,0,0,0.6);
         
     &.align-hrz {
         -webkit-transform: translateX(-50%);
@@ -220,7 +274,7 @@ html,body {
         transform: translate(-50%,-50%);
     }
     
-    .finish, .forrest, .health, .knight, .ghost {
+    .finish, .forrest, .wall, .health, .key, .knight, .ghost, .zombie, .rapid-strike, .magic-shield, .fire-arrow {
         position: absolute;
         width: 100px;
         height: 100px;
@@ -235,16 +289,38 @@ html,body {
         background-color: #b6ff00;
         //background-image: url('backgrounds/health.png');
     }
+    
+    .rapid-strike {
+        background-color: transparent;
+        background-image: url('icons/sword.png');
+    }
+    
+    .key {
+        background-color: transparent;
+        background-image: url('icons/key.png');
+        -webkit-animation: healthBeat 1000ms linear infinite both;
+        animation: healthBeat 1000ms linear infinite both;
+    }
 
     .forrest {
         border-radius: 6px;
         background-size: 100px;
-        background-image: url('backgrounds/forrest-tile-5.png');
-        -webkit-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.6);
-        -moz-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.6);
-        -ms-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.6);
-        -o-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.6);
-        box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.6);
+        background-image: url('backgrounds/forrest-tile-7.png');
+        -webkit-box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.6), inset 0px 0px 40px 0px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.6), inset 0px 0px 40px 0px rgba(0, 0, 0, 0.3);
+        -ms-box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.6), inset 0px 0px 40px 0px rgba(0, 0, 0, 0.3);
+        -o-box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.6), inset 0px 0px 40px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.6), inset 0px 0px 40px 0px rgba(0, 0, 0, 0.3);
+    }
+    .wall {
+        border-radius: 2px;
+        background-size: 100px;
+        background-image: url('backgrounds/wall-tile-1.png');
+        -webkit-box-shadow: 2px 5px 12px 0px rgba(0, 0, 0, 0.8), inset 0px 0px 100px 0px rgba(20, 20, 20, 0.5);
+        -moz-box-shadow: 2px 5px 12px 0px rgba(0, 0, 0, 0.8), inset 0px 0px 100px 0px rgba(20, 20, 20, 0.5);
+        -ms-box-shadow: 2px 5px 12px 0px rgba(0, 0, 0, 0.8), inset 0px 0px 100px 0px rgba(20, 20, 20, 0.5);
+        -o-box-shadow: 2px 5px 12px 0px rgba(0, 0, 0, 0.8), inset 0px 0px 100px 0px rgba(20, 20, 20, 0.5);
+        box-shadow: 2px 5px 12px 0px rgba(0, 0, 0, 0.8), inset 0px 0px 100px 0px rgba(20, 20, 20, 0.5);
     }
     .health {
         background-color: transparent;
@@ -253,18 +329,84 @@ html,body {
         animation: healthBeat 1000ms linear infinite both;
     }
 
-    .knight, .ghost {
+    .knight, .ghost, .zombie {
         top: 0;
         left: 0;
         z-index: 4;
+        overflow: visible;
         -webkit-transition: all .1s ease-in-out;
         -moz-transition: all .1s ease-in-out;
         -ms-transition: all .1s ease-in-out;
         -o-transition: all .1s ease-in-out;
         transition: all .1s ease-in-out;
+        .sp-bubble {
+            position: absolute;
+            width: auto;
+            max-width: 150px;
+            display: inline-block;
+            height: auto;
+            top: -50%;
+            left: 75%;
+            padding: 10px 15px;
+            background-color: #fff;
+            color: #000;
+            border-radius: 20px;
+            -webkit-box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.8);
+            -moz-box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.8);
+            -ms-box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.8);
+            -o-box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.8);
+            box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.8);
+        }
+        .player-stats {
+            position: absolute;
+            top: -35px;
+            background-color: rgba(255,255,255,.8);
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+            padding: 5px 10px;
+            border-radius: 4px;
+            white-space: nowrap;
+            &:before {
+                position: absolute;
+                left: 50%;
+                top: 100%;
+                content: " ";
+                display: inline-block;
+                margin: 0;
+                border-style: solid;
+                z-index: 3;
+                border-width: 8px 8px 0 8px;
+                border-color: rgba(255,255,255,.8) transparent transparent transparent;
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -o-transform: translateX(-50%);
+                transform: translateX(-50%);
+            }
+        }
     }
 
     .knight {
+        z-index:5;
+        &:before,&:after {
+            width: 20px;
+            height: 5px;
+            position: absolute;
+            background-color: #555;
+            content: '';
+            top: 41px;
+            left: 24px;
+            transform: rotate(10deg);
+            z-index: 1;
+            -webkit-animation: blink .1s linear 3s;
+            animation: blink .1ms linear 3s;
+        }
+        &:after {
+          left: 49px;
+          transform: rotate(-10deg);
+        }
         &.blue_knight {
             background-image: url('icons/blue-knight-left.png');
             &.left {
@@ -272,9 +414,24 @@ html,body {
             }
             &.right {
                 background-image: url('icons/blue-knight-right.png');
+                &:before{
+                    left: 32px;
+                }
+                &:after {
+                    left: 57px;
+                }
             }
             &.up{
                 background-image: url('icons/blue-knight-back.png');
+                &:before,&:after {
+                    display: none;
+                }
+            }
+            &.dead{
+                background-image: url('icons/blue-knight-dead.png');
+                &:before,&:after {
+                    display: none;
+                }
             }
         }
 
@@ -285,9 +442,24 @@ html,body {
             }
             &.right {
                 background-image: url('icons/red-knight-right.png');
+                &:before{
+                    left: 32px;
+                }
+                &:after {
+                    left: 57px;
+                }
             }
             &.up{
                 background-image: url('icons/red-knight-back.png');
+                &:before,&:after {
+                    display: none;
+                }
+            }
+            &.dead{
+                background-image: url('icons/red-knight-dead.png');
+                &:before,&:after {
+                    display: none;
+                }
             }
         }
 
@@ -298,9 +470,18 @@ html,body {
             }
             &.right {
                 background-image: url('icons/green-knight-right.png');
+                &:before{
+                    left: 32px;
+                }
+                &:after {
+                    left: 57px;
+                }
             }
             &.up{
                 background-image: url('icons/green-knight-back.png');
+                &:before,&:after {
+                    display: none;
+                }
             }
         }
 
@@ -311,18 +492,19 @@ html,body {
             }
             &.right {
                 background-image: url('icons/yellow-knight-right.png');
+                &:before{
+                    left: 32px;
+                }
+                &:after {
+                    left: 57px;
+                }
             }
             &.up{
                 background-image: url('icons/yellow-knight-back.png');
+                &:before,&:after {
+                    display: none;
+                }
             }
-        }
-        &:after {
-            position: absolute;
-            top: 30px;
-            width: 40px;
-            height: 20px;
-            background-color: #fff;
-            
         }
     }
 
@@ -330,6 +512,9 @@ html,body {
         background-image: url('icons/Ghost.png');
         -webkit-animation: ghostMove 3000ms linear .2s infinite;
         animation: ghostMove 3000ms linear .2s infinite;
+    }
+    .zombie {
+        background-image: url('icons/zombie-left.png');
     }
 }
 
@@ -412,7 +597,16 @@ html,body {
 
 
 
-
+@-webkit-keyframes blink {
+    0% {top: 41px}
+    50% {top: 46px}
+    100% {top: 41px}
+}
+@keyframes blink {
+    0% {top: 41px}
+    50% {top: 46px}
+    100% {top: 41px}
+}
 
 
 

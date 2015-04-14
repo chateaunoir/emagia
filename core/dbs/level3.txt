@@ -1,0 +1,80 @@
+{
+    "NAME" : "Level 3",
+    "SIZE" : [
+        {
+            "width" : "8",
+            "height": "8"
+        }
+    ],
+    "COMP" : [
+        {
+            "map" : [
+                {
+                    "background" : "css/backgrounds/grass.png",
+                    "ambiance" : "1"
+                }
+            ],
+            "start" : [
+                {
+                    "id": "1",
+                    "X" : "100",
+                    "Y" : "0"
+                }
+            ],
+            "finish" : [
+                {
+                
+                    "id": "1",
+                    "X" : "700",
+                    "Y" : "700"         
+                }
+
+            ],
+            "blocks" : [
+                { "id" : "0","position" : [{"X" : "400","Y" : "0"}],"type" : "forrest" },
+                { "id" : "1","position" : [{"X" : "200","Y" : "100"}],"type" : "forrest" },
+                { "id" : "2","position" : [{"X" : "400","Y" : "100"}],"type" : "forrest" },
+                { "id" : "3","position" : [{"X" : "500","Y" : "100"}],"type" : "forrest" },
+                { "id" : "4","position" : [{"X" : "700","Y" : "100"}],"type" : "forrest" },
+
+                { "id" : "5","position" : [{"X" : "0","Y" : "200"}],"type" : "forrest" },
+                { "id" : "6","position" : [{"X" : "100","Y" : "200"}],"type" : "forrest" },
+                { "id" : "7","position" : [{"X" : "200","Y" : "200"}],"type" : "forrest" },
+                { "id" : "8","position" : [{"X" : "700","Y" : "200"}],"type" : "forrest" },
+
+                { "id" : "9","position" : [{"X" : "400","Y" : "300"}],"type" : "forrest" },
+                { "id" : "10","position" : [{"X" : "600","Y" : "300"}],"type" : "forrest" },
+                { "id" : "11","position" : [{"X" : "700","Y" : "300"}],"type" : "forrest" },
+
+                { "id" : "12","position" : [{"X" : "100","Y" : "400"}],"type" : "forrest" },
+                { "id" : "13","position" : [{"X" : "200","Y" : "400"}],"type" : "forrest" },
+                { "id" : "14","position" : [{"X" : "300","Y" : "400"}],"type" : "forrest" },
+                { "id" : "15","position" : [{"X" : "400","Y" : "400"}],"type" : "forrest" },
+                { "id" : "16","position" : [{"X" : "600","Y" : "400"}],"type" : "forrest" },
+
+                { "id" : "17","position" : [{"X" : "100","Y" : "500"}],"type" : "forrest" },
+                { "id" : "18","position" : [{"X" : "300","Y" : "500"}],"type" : "forrest" },
+
+                { "id" : "19","position" : [{"X" : "300","Y" : "600"}],"type" : "forrest" },
+                { "id" : "20","position" : [{"X" : "400","Y" : "600"}],"type" : "forrest" },
+                { "id" : "21","position" : [{"X" : "500","Y" : "600"}],"type" : "forrest" },
+                { "id" : "22","position" : [{"X" : "700","Y" : "600"}],"type" : "forrest" },
+
+                { "id" : "23","position" : [{"X" : "0","Y" : "700"}],"type" : "forrest" },
+                { "id" : "24","position" : [{"X" : "100","Y" : "700"}],"type" : "forrest" },
+                { "id" : "25","position" : [{"X" : "500","Y" : "700"}],"type" : "forrest" },
+                { "id" : "26","position" : [{"X" : "0","Y" : "0"}],"type" : "forrest" }
+            ],
+            "monsters" : [
+                { "id" : "0","position" : [{"X" : "0","Y" : "300"}],"type" : "ghost", "stats": [{"HP" : "100", "ST" : "50", "DF" : "20", "SP" : "10", "LK" : "15"}], "skills" : [{"skill":"Magic Shield","desc":"This is a damn description","prob":"20"}]},
+                { "id" : "1","position" : [{"X" : "600","Y" : "200"}],"type" : "ghost", "stats": [{"HP" : "99", "ST" : "49", "DF" : "19", "SP" : "9", "LK" : "14"}], "skills" : [{"skill":"Magic Shield","desc":"This is a damn description","prob":"20"}]},
+                { "id" : "2","position" : [{"X" : "700","Y" : "500"}],"type" : "ghost", "stats": [{"HP" : "98", "ST" : "48", "DF" : "18", "SP" : "8", "LK" : "13"}], "skills" : [{"skill":"Magic Shield","desc":"This is a damn description","prob":"20"}]}
+            ],
+            "items" : [
+                {"id" : "1","position" : [{"X" : "100","Y" : "300"}],"type" : "health","plus" : "22"},
+                {"id" : "2","position" : [{"X" : "200","Y" : "500"}],"type" : "health","plus" : "22"},
+                {"id" : "3","position" : [{"X" : "700","Y" : "400"}],"type" : "health","plus" : "22"}
+            ]
+        }
+    ]
+}

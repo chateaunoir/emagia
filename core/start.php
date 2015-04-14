@@ -23,9 +23,7 @@
             <p class="browser_upgrade">You are using an <strong>outdated</strong> browser. <a href="http://browsehappy.com/">Click here to upgrade your browser</a> and improve your experience.</p>
         <![endif]-->
         <div id="preloader"><div class="loader"><div class="spinner"></div></div></div>
-
         <div id="game_wrapper" class="game-wrapper" data-role="page" data-theme="x">
-            <div id="environment" class="level-map"></div>
             <div id="viewport" class="user-viewport">
                 <nav id ="dashboard" class="navbar navbar-default">
                     <div class="container">
@@ -43,11 +41,11 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="navbar-collapse-1">
                             <ul class="nav navbar-nav">
-                                <li><p class="navbar-text text-danger" title="Health"><strong><small><span class="glyphicon glyphicon-heart"></span> HP <span class="kn-hp">-</span></small></strong></p></li>
-                                <li><p class="navbar-text text-warning" title="Strength"><strong><small><span class="glyphicon glyphicon-asterisk"></span> ST <span class="kn-st">-</span></small></strong></p></li>
-                                <li><p class="navbar-text text-info" title="Defence"><strong><small><span class="glyphicon glyphicon-record"></span> DF <span class="kn-df">-</span></small></strong></p></li>
-                                <li><p class="navbar-text text-primary" title="Speed"><strong><small><span class="glyphicon glyphicon-flash"></span> SP <span class="kn-sp">-</span></small></strong></p></li>
-                                <li><p class="navbar-text text-success" title="Luck"><strong><small><span class="glyphicon glyphicon-grain"></span> LK <span class="kn-lk">-</span></small></strong></p></li>
+                                <li><p class="navbar-text" title="Health"><strong><small><span class="glyphicon glyphicon-heart"></span> HP <span class="kn-hp">-</span></small></strong></p></li>
+                                <li><p class="navbar-text" title="Strength"><strong><small><span class="glyphicon glyphicon-asterisk"></span> ST <span class="kn-st">-</span></small></strong></p></li>
+                                <li><p class="navbar-text" title="Defence"><strong><small><span class="glyphicon glyphicon-record"></span> DF <span class="kn-df">-</span></small></strong></p></li>
+                                <li><p class="navbar-text" title="Speed"><strong><small><span class="glyphicon glyphicon-flash"></span> SP <span class="kn-sp">-</span></small></strong></p></li>
+                                <li><p class="navbar-text" title="Luck"><strong><small><span class="glyphicon glyphicon-grain"></span> LK <span class="kn-lk">-</span></small></strong></p></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
                                 <li><p id="current_level" class="navbar-text h6"> - </p></li>
@@ -66,9 +64,26 @@
                         </div><!-- /.navbar-collapse -->
                     </div><!-- /.container-fluid -->
                 </nav>
-                <div class="pause-menu fix-middle">
-                    <h1 class="text-center">Paused</h1>
-                    <h6 class="text-center">Did you see a ghost?</h6>
+                <div id="pause-menu">
+                    <div class="fix-middle">
+                        <h1 class="text-center">Paused</h1>
+                        <h6 class="text-center">Did you see a ghost?</h6>
+                    </div>
+                </div>
+                <div id="game-menu" class="active">
+                    <div class="fix-middle">
+                        <div class="container pad-sep-30">
+                            <h1 class="text-center">We're all set Captain</h1>
+                            <h6 class="text-center">Press "Start" to play level 1</h6>
+                            <div class="pad-sep-60">
+                                <div class="row">
+                                    <div class="col-md-4 col-md-offset-4">
+                                        <button type="button" id="start_game" class="btn btn-primary btn-lg btn-block" autofocus>Start</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

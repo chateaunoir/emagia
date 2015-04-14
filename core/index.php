@@ -30,9 +30,9 @@
             <!-- START: Content-->
             <div id="index" class="page-content" data-role="main" role="main" data-theme="x">
                 <div class="page-section">
-                    <div class="deco"></div>
-                    <div class="deco"></div>
-                    <div class="deco"></div>
+                    <div id="cloud_1" class="deco"></div>
+                    <div id="cloud_2" class="deco"></div>
+                    <div id="cloud_3" class="deco"></div>
                     <div class="container pad-sep-120">
                         <h1 class="page-title text-center ">Heroes<span class="sml-text">of</span><span class="lrg-text">eMagia</span></h1>
                         <h5 class="text-center">Keeping the internet cats<br> at bay since 2015</h5>

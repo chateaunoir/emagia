@@ -1,0 +1,36 @@
+{
+    "NAME" : "Level 8",
+    "SIZE" : [
+        {
+            "width" : "18",
+            "height": "12"
+        }
+    ],
+    "COMP" : [
+        {
+            "map" : [
+                {
+                    "background" : "css/backgrounds/grass.png",
+                    "ambiance" : "1"
+                }
+            ],
+            "start" : [
+                {
+                    "id": "1",
+                    "X" : "200",
+                    "Y" : "200"
+                }
+            ],
+            "finish" : [
+                {
+                    "id": "1",
+                    "X" : "800",
+                    "Y" : "500"
+                }
+            ],
+            "blocks" : [],
+            "monsters" : [],
+            "items" : []
+        }
+    ]
+}

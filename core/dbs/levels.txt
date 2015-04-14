@@ -1,0 +1,48 @@
+{
+    "LEVELS": [
+        {
+            "ID"    :   "0",
+            "LVL"   :   "dbs/level0.txt"
+        },
+        {
+            "ID"    :   "1",
+            "LVL"   :   "dbs/level1.txt"
+        },
+        {
+            "ID"    :   "2",
+            "LVL"   :   "dbs/level2.txt"
+        },
+        {
+            "ID"    :   "3",
+            "LVL"   :   "dbs/level3.txt"
+        },
+        {
+            "ID"    :   "4",
+            "LVL"   :   "dbs/level4.txt"
+        },
+        {
+            "ID"    :   "5",
+            "LVL"   :   "dbs/level5.txt"
+        },
+        {
+            "ID"    :   "6",
+            "LVL"   :   "dbs/level6.txt"
+        },
+        {
+            "ID"    :   "7",
+            "LVL"   :   "dbs/level7.txt"
+        },
+        {
+            "ID"    :   "8",
+            "LVL"   :   "dbs/level8.txt"
+        },
+        {
+            "ID"    :   "9",
+            "LVL"   :   "dbs/level9.txt"
+        },
+        {
+            "ID"    :   "10",
+            "LVL"   :   "dbs/level10.txt"
+        }
+              ]
+}

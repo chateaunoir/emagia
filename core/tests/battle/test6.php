@@ -77,16 +77,16 @@
 
                     if (hasLife(player1.hp)) {
                         customDebug("________________ Player one's turn ___________________");
-                        var p1_attack = attack(pl1_skill_atk, luck(player2.lk,player1.st));
+                        var p1_attack = attack(pl1_skill_atk, luck(player2.lk, player1.st));
                         var p2_defense = defense(pl2_skill_def, player2.df);
 
                         player2.hp = player2.hp - Math.max(0, (p1_attack - p2_defense));
-                        customDebug('PL2 hits with ' + p1_attack + ' strength. PL1 defends himself with ' + p2_defense + ' defence and is left with ' + player2.hp + ' health.');
+                        customDebug('PL1 hits with ' + p1_attack + ' strength. PL2 defends himself with ' + p2_defense + ' defence and is left with ' + player2.hp + ' health.');
                     }
 
                     if (hasLife(player2.hp)) {
                         customDebug("________________ Player two's turn ___________________");
-                        var p2_attack = attack(pl2_skill_atk, luck(player1.lk,player2.st));
+                        var p2_attack = attack(pl2_skill_atk, luck(player1.lk, player2.st));
                         var p1_defense = defense(pl1_skill_def, player1.df);
 
                         player1.hp = player1.hp - Math.max(0, (p2_attack - p1_defense));
@@ -96,10 +96,12 @@
                     if (!hasLife(player1.hp)) {
                         customDebug('PL1 no more power');
                         result['winner'] = 'p2';
+                        result['loser'] = 'p1';
                         kungfu = false;
                     } else if (!hasLife(player2.hp)) {
                         customDebug('PL2 no more power');
                         result['winner'] = 'p1';
+                        result['loser'] = 'p2';
                         kungfu = false;
                     }
 
@@ -110,10 +112,13 @@
                     if (i == 20) {
                         if (player1.hp > player2.hp) {
                             result['winner'] = 'p1';
+                            result['loser'] = 'p2';
                         } else if (player1.hp < player2.hp) {
                             result['winner'] = 'p2';
+                            result['loser'] = 'p1';
                         } else {
                             result['winner'] = 'none';
+                            result['loser'] = 'none';
                             customDebug("I DON'T BELIEVE IT... IT'S A DRAW!");
                         }
                         customDebug('THAT WAS THE FINAL ROUND!');

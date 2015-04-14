@@ -1,0 +1,45 @@
+{
+    "NAME" : "Level 5",
+    "SIZE" : [
+        {
+            "width" : "12",
+            "height": "8"
+        }
+    ],
+    "COMP" : [
+        {
+            "map" : [
+                {
+                    "background" : "css/backgrounds/grass.png",
+                    "ambiance" : "1"
+                }
+            ],
+            "start" : [
+                {
+                    "id": "1",
+                    "X" : "200",
+                    "Y" : "200"
+                }
+            ],
+            "finish" : [
+                {
+                    "id": "1",
+                    "X" : "800",
+                    "Y" : "500"
+                }
+            ],
+            "blocks" : [
+                { "id" : "41","position" : [{"X" : "400","Y" : "0"}],"type" : "forrest" }
+            ],
+            "monsters" : [
+                { "id" : "0","position" : [{"X" : "0","Y" : "300"}],"type" : "ghost", "stats": [{"HP" : "100", "ST" : "50", "DF" : "20", "SP" : "10", "LK" : "15"}], "skills" : [{"skill":"Magic Shield","desc":"This is a damn description","prob":"20"}]},
+                { "id" : "1","position" : [{"X" : "600","Y" : "200"}],"type" : "ghost", "stats": [{"HP" : "99", "ST" : "49", "DF" : "19", "SP" : "9", "LK" : "14"}], "skills" : [{"skill":"Magic Shield","desc":"This is a damn description","prob":"20"}]},
+                { "id" : "2","position" : [{"X" : "700","Y" : "500"}],"type" : "ghost", "stats": [{"HP" : "98", "ST" : "48", "DF" : "18", "SP" : "8", "LK" : "13"}], "skills" : [{"skill":"Magic Shield","desc":"This is a damn description","prob":"20"}]}
+            ],
+            "items" : [
+                {"id" : "0","position" : [{"X" : "900","Y" : "300"}],"type" : "health","plus" : "22"},
+                {"id" : "1","position" : [{"X" : "600","Y" : "0"}],"type" : "rapid-strike","plus" : "22"}
+            ]
+        }
+    ]
+}
