@@ -72,8 +72,22 @@
                 { "id" : "35","position" : [{"X" : "400","Y" : "700"}],"type" : "forrest" },
                 { "id" : "36","position" : [{"X" : "700","Y" : "700"}],"type" : "forrest" }
             ],
-            "monsters" : [],
-            "items" : []
+            "monsters" : [
+                { "id" : "0","position" : [{"X" : "300","Y" : "600"}],"type" : "ghost", "stats": [{"HP" : "100", "ST" : "43", "DF" : "18", "SP" : "10", "LK" : "9"}], "skills" : [{"skill":"Magic Shield","desc":"This is a damn description","prob":"20"}]},                                          
+                { "id" : "1","position" : [{"X" : "600","Y" : "0"}],"type" : "ghost", "stats": [{"HP" : "100", "ST" : "45", "DF" : "21", "SP" : "12", "LK" : "10"}], "skills" : [{"skill":"Magic Shield","desc":"This is a damn description","prob":"20"}]},                                          
+                { "id" : "2","position" : [{"X" : "100","Y" : "500"}],"type" : "ghost", "stats": [{"HP" : "100", "ST" : "43", "DF" : "23", "SP" : "13", "LK" : "16"}], "skills" : [{"skill":"Magic Shield","desc":"This is a damn description","prob":"20"}]},
+                { "id" : "3","position" : [{"X" : "700","Y" : "500"}],"type" : "ghost", "stats": [{"HP" : "100", "ST" : "41", "DF" : "27", "SP" : "13", "LK" : "16"}], "skills" : [{"skill":"Magic Shield","desc":"This is a damn description","prob":"20"}]},                                           
+                { "id" : "4","position" : [{"X" : "900","Y" : "600"}],"type" : "ghost", "stats": [{"HP" : "100", "ST" : "47", "DF" : "32", "SP" : "16", "LK" : "15"}], "skills" : [{"skill":"Magic Shield","desc":"This is a damn description","prob":"20"}]}                                          
+
+            ],
+            "items" : [
+                {"id" : "0","position" : [{"X" : "500","Y" : "0"}],"type" : "health","plus" : "22"},
+                {"id" : "1","position" : [{"X" : "400","Y" : "300"}],"type" : "health","plus" : "22"},
+                {"id" : "2","position" : [{"X" : "400","Y" : "500"}],"type" : "key","plus" : "22"},
+                {"id" : "3","position" : [{"X" : "500","Y" : "700"}],"type" : "health","plus" : "22"},
+                {"id" : "4","position" : [{"X" : "0","Y" : "600"}],"type" : "health","plus" : "22"},
+                {"id" : "5","position" : [{"X" : "0","Y" : "600"}],"type" : "health","plus" : "22"}
+            ]
         }
     ]
 }

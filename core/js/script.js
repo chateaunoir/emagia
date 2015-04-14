@@ -2332,7 +2332,7 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
         this.y = Y;
     }
 
-    // This function builds the objects in both the knightStats and levelMonsters arrays;
+    // These functions build the objects in both the knightStats and levelMonsters arrays;
     function player_matrix(id, type, health, strength, defence, speed, luck) 
     {
         this.ID = id;
@@ -3153,30 +3153,21 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
 
     }
 
-    function checkLevels()
-    {
+    function checkLevels() {
         var levels = new Object();
          $.getJSON('dbs/levels.txt', function (result) {
             
-            // Check to see if the levels file has anything in it
-
-            if (result.LEVELS != null || result.LEVELS != '') {
-
-                for(var i=1; i<result.LEVELS.length; i++)
-                {
-                    levels[i] = result.LEVELS[i].LVL;
-                    
-                }
-                
-            }
+            for(var i=1; i<result.LEVELS.length; i++) {
+                levels[i] = result.LEVELS[i].LVL;                    
+            }   
             
         }).done(function()
         {
-            return levels;            
+            console.log(levels);            
         });
         
     }
-    console.log(checkLevels());
+    checkLevels();
 
 
     ///*** HERE IS WHERE WE POWER UP THE ENVIRONMENT ***/
