@@ -72,9 +72,12 @@
                 </div>
                 <div id="game-menu" class="active">
                     <div class="fix-middle">
-                        <div class="container pad-sep-30">
-                            <h1 class="text-center">We're all set Captain</h1>
-                            <h6 class="text-center">Press "Start" to play level 1</h6>
+                        <div class="container pad-sep-30 text-center">
+                            <h1>We're all set Captain</h1>
+                            <h6>Press "Start" to play a level</h6>
+                            <div class="pad-top-30">
+                                <small>or <a href="https://github.com/lexeckhart/eMagia">Fork it on GitHub</a></small>
+                            </div>
                             <div class="pad-sep-60">
                                 <div class="row">
                                     <div class="col-md-4 col-md-offset-4">
